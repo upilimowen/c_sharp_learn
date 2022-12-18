@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Введите, пожалуйста, целое число!");
+Console.WriteLine("Введите, пожалуйста, целое число!");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number < 100)
 {
@@ -6,6 +6,11 @@ if (number < 100)
 }
 else
 {
-    int result = number/100%10;
+    int result = number;
+    while (result > 1000)
+    {
+        result = result/100;         
+    }
+    result = result%10;
     Console.WriteLine(number + " -> " + result);
 }
